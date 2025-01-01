@@ -31,7 +31,7 @@ struct HeaderView: View {
                 Image(systemName: "gear")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: max(helloHeight - 60, 30), height: max(helloHeight - 60, 30)) // Убедимся, что размер не становится отрицательным
+                    .frame(width: max(helloHeight - 60, 30), height: max(helloHeight - 60, 30))
             }
             .padding(.trailing)
         }

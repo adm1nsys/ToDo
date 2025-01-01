@@ -22,7 +22,7 @@ struct Hello: View {
                 Text(displayName())
                     .font(.system(size: 27, weight: .medium, design: .default))
             }
-        }.padding(.all)
+        }.padding([.top, .leading, .trailing])
     }
     
     private func greetingMessage() -> String {
