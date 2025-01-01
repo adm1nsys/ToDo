@@ -10,44 +10,76 @@ import SwiftUI
 struct TaskListView: View {
     @Binding var tasks: [Task]
     @Binding var showEdit: Bool
-
+    var deleteTask: (Task) -> Void
+    var toggleTaskCompletion: (Task) -> Void
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 10) {
-                ForEach($tasks) { $task in
-                    HStack {
-                        Text(task.title)
-                            .strikethrough(task.isCompleted, color: .red)
-                            .foregroundColor(task.isCompleted ? .gray : .primary)
-                            .animation(.easeInOut(duration: 0.3), value: task.isCompleted)
+                ForEach(tasks, id: \.id) { task in
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(task.title)
+                                .strikethrough(task.isCompleted, color: .red)
+                                .foregroundColor(task.isCompleted ? .gray : .primary)
 
-                        Spacer()
+                            Spacer()
 
-                        if showEdit {
-                            Button {
-                                withAnimation {
-                                    tasks.removeAll { $0.id == task.id }
+                            if showEdit {
+                                Button {
+                                    withAnimation {
+                                        deleteTask(task)
+                                    }
+                                    print("Задача удалена: \(task)")
+                                } label: {
+                                    Image(systemName: "minus.circle.fill")
+                                        .foregroundColor(.pink)
                                 }
-                            } label: {
-                                Image(systemName: "minus.circle.fill")
-                                    .foregroundColor(.pink)
                             }
+
+                            Button {
+                                toggleTaskCompletion(task)
+                            } label: {
+                                Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                            }
+
                         }
 
-                        Button {
-                            task.isCompleted.toggle()
-                        } label: {
-                            Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                        if let description = task.description {
+                            Text(description)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+
+                        if let deadline = task.deadline {
+                            HStack {
+                                Text("Deadline: \(deadline, formatter: taskDateFormatter)")
+                                    .font(.caption)
+                                    .foregroundColor(.blue)
+                                Spacer()
+                                if Calendar.current.isDateInToday(deadline) {
+                                    Text("Today!")
+                                        .font(.caption)
+                                        .foregroundColor(.red)
+                                }
+                            }
                         }
                     }
                     .padding()
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(8)
-                    .transition(.opacity.combined(with: .slide))
                 }
+
             }
             .padding(.horizontal, 10)
         }
+    }
+
+    private var taskDateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
     }
 }
 
