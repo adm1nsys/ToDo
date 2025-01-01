@@ -11,11 +11,20 @@
 		AEE4BCDC2D232D040007495D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCDB2D232D040007495D /* ContentView.swift */; };
 		AEE4BCDE2D232D060007495D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE4BCDD2D232D060007495D /* Assets.xcassets */; };
 		AEE4BCE12D232D060007495D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE4BCE02D232D060007495D /* Preview Assets.xcassets */; };
-		AEE4BCE32D232D060007495D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCE22D232D060007495D /* Persistence.swift */; };
 		AEE4BCE62D232D060007495D /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCE42D232D060007495D /* ToDo.xcdatamodeld */; };
 		AEE4BCF02D232D070007495D /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCEF2D232D070007495D /* ToDoTests.swift */; };
 		AEE4BCFA2D232D070007495D /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCF92D232D070007495D /* ToDoUITests.swift */; };
 		AEE4BCFC2D232D070007495D /* ToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCFB2D232D070007495D /* ToDoUITestsLaunchTests.swift */; };
+		AEE4BD2B2D24CEA80007495D /* GitLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD212D24CEA70007495D /* GitLink.swift */; };
+		AEE4BD2C2D24CEA80007495D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD222D24CEA70007495D /* BlurView.swift */; };
+		AEE4BD2D2D24CEA80007495D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD232D24CEA70007495D /* HeaderView.swift */; };
+		AEE4BD2E2D24CEA80007495D /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD242D24CEA70007495D /* Hello.swift */; };
+		AEE4BD2F2D24CEA80007495D /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD252D24CEA80007495D /* Background.swift */; };
+		AEE4BD302D24CEA80007495D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD262D24CEA80007495D /* Task.swift */; };
+		AEE4BD312D24CEA80007495D /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD272D24CEA80007495D /* TaskListView.swift */; };
+		AEE4BD322D24CEA80007495D /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD282D24CEA80007495D /* TaskEditorView.swift */; };
+		AEE4BD332D24CEA80007495D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD292D24CEA80007495D /* SettingsView.swift */; };
+		AEE4BD342D24CEA80007495D /* BG2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD2A2D24CEA80007495D /* BG2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +50,22 @@
 		AEE4BCDB2D232D040007495D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AEE4BCDD2D232D060007495D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEE4BCE02D232D060007495D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AEE4BCE22D232D060007495D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		AEE4BCE52D232D060007495D /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
 		AEE4BCEB2D232D070007495D /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE4BCEF2D232D070007495D /* ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTests.swift; sourceTree = "<group>"; };
 		AEE4BCF52D232D070007495D /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE4BCF92D232D070007495D /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
 		AEE4BCFB2D232D070007495D /* ToDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AEE4BD212D24CEA70007495D /* GitLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitLink.swift; sourceTree = "<group>"; };
+		AEE4BD222D24CEA70007495D /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		AEE4BD232D24CEA70007495D /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		AEE4BD242D24CEA70007495D /* Hello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
+		AEE4BD252D24CEA80007495D /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		AEE4BD262D24CEA80007495D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AEE4BD272D24CEA80007495D /* TaskListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		AEE4BD282D24CEA80007495D /* TaskEditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
+		AEE4BD292D24CEA80007495D /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AEE4BD2A2D24CEA80007495D /* BG2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BG2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +118,8 @@
 			children = (
 				AEE4BCD92D232D040007495D /* ToDoApp.swift */,
 				AEE4BCDB2D232D040007495D /* ContentView.swift */,
+				AEE4BD202D24CE7D0007495D /* Models */,
 				AEE4BCDD2D232D060007495D /* Assets.xcassets */,
-				AEE4BCE22D232D060007495D /* Persistence.swift */,
 				AEE4BCE42D232D060007495D /* ToDo.xcdatamodeld */,
 				AEE4BCDF2D232D060007495D /* Preview Content */,
 			);
@@ -131,6 +149,23 @@
 				AEE4BCFB2D232D070007495D /* ToDoUITestsLaunchTests.swift */,
 			);
 			path = ToDoUITests;
+			sourceTree = "<group>";
+		};
+		AEE4BD202D24CE7D0007495D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEE4BD252D24CEA80007495D /* Background.swift */,
+				AEE4BD2A2D24CEA80007495D /* BG2.swift */,
+				AEE4BD222D24CEA70007495D /* BlurView.swift */,
+				AEE4BD212D24CEA70007495D /* GitLink.swift */,
+				AEE4BD232D24CEA70007495D /* HeaderView.swift */,
+				AEE4BD242D24CEA70007495D /* Hello.swift */,
+				AEE4BD292D24CEA80007495D /* SettingsView.swift */,
+				AEE4BD262D24CEA80007495D /* Task.swift */,
+				AEE4BD282D24CEA80007495D /* TaskEditorView.swift */,
+				AEE4BD272D24CEA80007495D /* TaskListView.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +298,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE4BCE32D232D060007495D /* Persistence.swift in Sources */,
 				AEE4BCDC2D232D040007495D /* ContentView.swift in Sources */,
+				AEE4BD302D24CEA80007495D /* Task.swift in Sources */,
+				AEE4BD312D24CEA80007495D /* TaskListView.swift in Sources */,
+				AEE4BD322D24CEA80007495D /* TaskEditorView.swift in Sources */,
+				AEE4BD2E2D24CEA80007495D /* Hello.swift in Sources */,
 				AEE4BCDA2D232D040007495D /* ToDoApp.swift in Sources */,
+				AEE4BD2B2D24CEA80007495D /* GitLink.swift in Sources */,
+				AEE4BD2F2D24CEA80007495D /* Background.swift in Sources */,
 				AEE4BCE62D232D060007495D /* ToDo.xcdatamodeld in Sources */,
+				AEE4BD2C2D24CEA80007495D /* BlurView.swift in Sources */,
+				AEE4BD2D2D24CEA80007495D /* HeaderView.swift in Sources */,
+				AEE4BD332D24CEA80007495D /* SettingsView.swift in Sources */,
+				AEE4BD342D24CEA80007495D /* BG2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +482,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +512,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

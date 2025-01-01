@@ -9,78 +9,80 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    @State var showSettings = false
+    @State private var showEdit = false
+    @State private var tasks: [Task] = [] {
+        didSet {
+            saveTasks()
+        }
+    }
+    @State private var newTaskTitle: String = ""
+    @State private var helloHeight: CGFloat = 0
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        ZStack{
+            Background()
+            GeometryReader { geometry in
+                VStack{
+                    
+                    HeaderView(showSettings: $showSettings, helloHeight: $helloHeight)
+                        
+
+                    VStack(spacing: 0.0){
+
+                        TaskEditorView(tasks: $tasks, showEdit: $showEdit, newTaskTitle: $newTaskTitle)
+                        
+                        TaskListView(tasks: $tasks, showEdit: $showEdit)
+                    
+                    
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    .background(BG2()).padding(.horizontal)
+                    
+                    
+                        
+                        GitLink()
+                    
+                    
                 }
             }
-            Text("Select an item")
-        }
+            
+            ZStack {
+                if showSettings {
+                    SettingsView(showSettings: $showSettings)
+                        .transition(.opacity)
+                        .zIndex(1)
+                }
+            }
+            .animation(.easeInOut(duration: 0.3), value: showSettings)
+
+            
+        }.onAppear(perform: loadTasks)
     }
 
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    
+        private func saveTasks() {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(tasks) {
+                UserDefaults.standard.set(encoded, forKey: "tasks")
             }
         }
-    }
 
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    
+        private func loadTasks() {
+            let decoder = JSONDecoder()
+            if let data = UserDefaults.standard.data(forKey: "tasks"),
+               let decodedTasks = try? decoder.decode([Task].self, from: data) {
+                tasks = decodedTasks
             }
         }
+    private func deleteTask(_ task: Task) {
+        tasks.removeAll { $0.id == task.id }
     }
+
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
 }
