@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <rect key="frame" x="0.0" y="912" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
                                 <rect key="frame" x="0.0" y="240.66666666666663" width="430" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
@@ -61,9 +55,7 @@
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="DjA-Ot-Wez" secondAttribute="bottom" constant="20" id="Itq-FF-yzf"/>
                             <constraint firstItem="fTh-si-XMC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Knp-pw-NfE"/>
                             <constraint firstItem="DjA-Ot-Wez" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lvc-ff-okb"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstItem="DjA-Ot-Wez" firstAttribute="top" secondItem="fTh-si-XMC" secondAttribute="bottom" constant="8" symbolic="YES" id="TtI-MD-yBe"/>
-                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="qY7-wB-1is"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="181.5" id="tgw-jS-qOW"/>
                             <constraint firstItem="DjA-Ot-Wez" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="uy1-Nn-Es1"/>
