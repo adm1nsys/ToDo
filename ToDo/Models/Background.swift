@@ -62,6 +62,34 @@ struct Background: View {
     }
 }
 
-#Preview {
-    Background()
+// MARK: - Preview
+
+struct Background_Previews: PreviewProvider {
+    static var previews: some View {
+        // iPhone 15 Pro Max iOS 17.2
+        Background()
+            .preferredColorScheme(.light)
+            .previewDisplayName("Background 15 PM Light")
+            .previewDevice("iPhone 15 Pro Max")
+            .previewLayout(.device)
+        
+        Background()
+            .preferredColorScheme(.dark)
+            .previewDisplayName("Background 15 PM Dark")
+            .previewDevice("iPhone 15 Pro Max")
+            .previewLayout(.device)
+        
+        // iPhone SE (1st generation) iOS 15.5
+        Background()
+            .preferredColorScheme(.light)
+            .previewDisplayName("Background SE 1Gn Light")
+            .previewDevice("iPhone SE (1st generation)")
+            .previewLayout(.device)
+        
+        Background()
+            .preferredColorScheme(.dark)
+            .previewDisplayName("Background SE 1Gn Dark")
+            .previewDevice("iPhone SE (1st generation)")
+            .previewLayout(.device)
+    }
 }

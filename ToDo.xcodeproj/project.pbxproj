@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AE3C1AD22D25BBE300521944 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE3C1AD12D25BBE300521944 /* Launch Screen.storyboard */; };
+		AEB828EA2D3466C200F40C11 /* SetUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB828E92D3466C200F40C11 /* SetUpView.swift */; };
+		AEB828EC2D3466C900F40C11 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB828EB2D3466C900F40C11 /* NotificationService.swift */; };
+		AEB828EE2D3466D100F40C11 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB828ED2D3466D100F40C11 /* AppSettings.swift */; };
+		AEB828F02D3466E400F40C11 /* LoadScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB828EF2D3466E400F40C11 /* LoadScreenView.swift */; };
 		AEE4BCDA2D232D040007495D /* ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCD92D232D040007495D /* ToDoApp.swift */; };
 		AEE4BCDC2D232D040007495D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCDB2D232D040007495D /* ContentView.swift */; };
 		AEE4BCDE2D232D060007495D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE4BCDD2D232D060007495D /* Assets.xcassets */; };
@@ -16,7 +20,6 @@
 		AEE4BCF02D232D070007495D /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCEF2D232D070007495D /* ToDoTests.swift */; };
 		AEE4BCFA2D232D070007495D /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCF92D232D070007495D /* ToDoUITests.swift */; };
 		AEE4BCFC2D232D070007495D /* ToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BCFB2D232D070007495D /* ToDoUITestsLaunchTests.swift */; };
-		AEE4BD2B2D24CEA80007495D /* GitLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD212D24CEA70007495D /* GitLink.swift */; };
 		AEE4BD2C2D24CEA80007495D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD222D24CEA70007495D /* BlurView.swift */; };
 		AEE4BD2D2D24CEA80007495D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD232D24CEA70007495D /* HeaderView.swift */; };
 		AEE4BD2E2D24CEA80007495D /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE4BD242D24CEA70007495D /* Hello.swift */; };
@@ -47,6 +50,10 @@
 
 /* Begin PBXFileReference section */
 		AE3C1AD12D25BBE300521944 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		AEB828E92D3466C200F40C11 /* SetUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpView.swift; sourceTree = "<group>"; };
+		AEB828EB2D3466C900F40C11 /* NotificationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		AEB828ED2D3466D100F40C11 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		AEB828EF2D3466E400F40C11 /* LoadScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadScreenView.swift; sourceTree = "<group>"; };
 		AEE4BCD62D232D040007495D /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE4BCD92D232D040007495D /* ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoApp.swift; sourceTree = "<group>"; };
 		AEE4BCDB2D232D040007495D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +65,6 @@
 		AEE4BCF52D232D070007495D /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE4BCF92D232D070007495D /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
 		AEE4BCFB2D232D070007495D /* ToDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AEE4BD212D24CEA70007495D /* GitLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitLink.swift; sourceTree = "<group>"; };
 		AEE4BD222D24CEA70007495D /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		AEE4BD232D24CEA70007495D /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		AEE4BD242D24CEA70007495D /* Hello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 			children = (
 				AEE4BCD92D232D040007495D /* ToDoApp.swift */,
 				AEE4BCDB2D232D040007495D /* ContentView.swift */,
+				AEB828EF2D3466E400F40C11 /* LoadScreenView.swift */,
 				AE3C1AD12D25BBE300521944 /* Launch Screen.storyboard */,
 				AEE4BD202D24CE7D0007495D /* Models */,
 				AEE4BCDD2D232D060007495D /* Assets.xcassets */,
@@ -157,10 +164,12 @@
 		AEE4BD202D24CE7D0007495D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AEB828ED2D3466D100F40C11 /* AppSettings.swift */,
+				AEB828EB2D3466C900F40C11 /* NotificationService.swift */,
+				AEB828E92D3466C200F40C11 /* SetUpView.swift */,
 				AEE4BD252D24CEA80007495D /* Background.swift */,
 				AEE4BD2A2D24CEA80007495D /* BG2.swift */,
 				AEE4BD222D24CEA70007495D /* BlurView.swift */,
-				AEE4BD212D24CEA70007495D /* GitLink.swift */,
 				AEE4BD232D24CEA70007495D /* HeaderView.swift */,
 				AEE4BD242D24CEA70007495D /* Hello.swift */,
 				AEE4BD292D24CEA80007495D /* SettingsView.swift */,
@@ -302,14 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB828EA2D3466C200F40C11 /* SetUpView.swift in Sources */,
 				AEE4BCDC2D232D040007495D /* ContentView.swift in Sources */,
+				AEB828EC2D3466C900F40C11 /* NotificationService.swift in Sources */,
 				AEE4BD302D24CEA80007495D /* Task.swift in Sources */,
 				AEE4BD312D24CEA80007495D /* TaskListView.swift in Sources */,
 				AEE4BD322D24CEA80007495D /* TaskEditorView.swift in Sources */,
 				AEE4BD2E2D24CEA80007495D /* Hello.swift in Sources */,
 				AEE4BCDA2D232D040007495D /* ToDoApp.swift in Sources */,
-				AEE4BD2B2D24CEA80007495D /* GitLink.swift in Sources */,
+				AEB828EE2D3466D100F40C11 /* AppSettings.swift in Sources */,
 				AEE4BD2F2D24CEA80007495D /* Background.swift in Sources */,
+				AEB828F02D3466E400F40C11 /* LoadScreenView.swift in Sources */,
 				AEE4BCE62D232D060007495D /* ToDo.xcdatamodeld in Sources */,
 				AEE4BD2C2D24CEA80007495D /* BlurView.swift in Sources */,
 				AEE4BD2D2D24CEA80007495D /* HeaderView.swift in Sources */,
@@ -476,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDo/Preview Content\"";
 				DEVELOPMENT_TEAM = 88M5SYPGUR;
 				ENABLE_PREVIEWS = YES;
@@ -511,7 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"ToDo/Preview Content\"";
 				DEVELOPMENT_TEAM = 88M5SYPGUR;
 				ENABLE_PREVIEWS = YES;
