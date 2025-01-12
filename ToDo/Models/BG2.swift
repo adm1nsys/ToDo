@@ -14,7 +14,7 @@ struct BG2: View {
                 RoundedRectangle(cornerRadius: 15)
                         .stroke(Color("BG Accent"), lineWidth: 5)
             )
-                .cornerRadius(15)
+            .cornerRadius(15)
     }
 }
 

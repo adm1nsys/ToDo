@@ -14,7 +14,7 @@ struct Task: Identifiable, Codable {
     var deadline: Date?
     var isCompleted: Bool
 
-    init(id: UUID = UUID(), title: String, description: String? = nil, deadline: Date? = nil, isCompleted: Bool = false) {
+    init(id: UUID = UUID(), title: String, description: String? = nil, deadline: Date? = nil, isCompleted: Bool = false, isCritical: Bool = false) {
         self.id = id
         self.title = title
         self.description = description
@@ -22,3 +22,4 @@ struct Task: Identifiable, Codable {
         self.isCompleted = isCompleted
     }
 }
+
