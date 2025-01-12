@@ -18,13 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="0.0" y="240.66666666666663" width="430" height="43"/>
+                                <rect key="frame" x="0.0" y="353" width="430" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Hti-Xi-mma"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="s4g-Ya-Mzl">
-                                <rect key="frame" x="165" y="303.66666666666669" width="100" height="100"/>
+                                <rect key="frame" x="165" y="416" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="A8S-XD-ASr"/>
                                     <constraint firstAttribute="width" constant="100" id="Bx0-8b-TTD"/>
@@ -51,13 +54,17 @@
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="2pN-vh-B02"/>
+                            <constraint firstItem="s4g-Ya-Mzl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9E7-uE-xIF"/>
+                            <constraint firstItem="s4g-Ya-Mzl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9EP-Se-3yv"/>
                             <constraint firstItem="s4g-Ya-Mzl" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="20" id="D9p-Yc-7qY"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="DjA-Ot-Wez" secondAttribute="bottom" constant="20" id="Itq-FF-yzf"/>
                             <constraint firstItem="fTh-si-XMC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Knp-pw-NfE"/>
                             <constraint firstItem="DjA-Ot-Wez" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Lvc-ff-okb"/>
                             <constraint firstItem="DjA-Ot-Wez" firstAttribute="top" secondItem="fTh-si-XMC" secondAttribute="bottom" constant="8" symbolic="YES" id="TtI-MD-yBe"/>
+                            <constraint firstItem="s4g-Ya-Mzl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WTT-Ig-2ld"/>
+                            <constraint firstItem="s4g-Ya-Mzl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eUQ-5M-JEn"/>
+                            <constraint firstItem="s4g-Ya-Mzl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="h7B-kO-JNB"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="qY7-wB-1is"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="181.5" id="tgw-jS-qOW"/>
                             <constraint firstItem="DjA-Ot-Wez" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="uy1-Nn-Es1"/>
                             <constraint firstItem="s4g-Ya-Mzl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="v44-WP-hA9"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="x7j-FC-K8j"/>
