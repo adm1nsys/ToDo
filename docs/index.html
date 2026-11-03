@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>ToDo — adm1nsys</title>
+    <meta name="description" content="A small to-do app for iPhone and iPad in SwiftUI: tasks with deadlines, reminders before the deadline and a greeting by time of day.">
+    <meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/adm1nsys/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="/adm1nsys/assets/css/style.css">
+    <link rel="stylesheet" href="/adm1nsys/kit/project.css">
+    <style>
+      .app-head { display: flex; align-items: center; gap: 1rem; }
+      .app-head img { width: 64px; height: 64px; border-radius: 15px; flex: none; }
+      .app-head h1 { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="backdrop backdrop-short" aria-hidden="true"></div>
+
+    <main class="wrap">
+      <header class="page-head">
+        <p class="eyebrow">iOS · iPadOS · SwiftUI</p>
+        <div class="app-head">
+          <img src="https://raw.githubusercontent.com/adm1nsys/ToDo/main/Frame%202.png" alt="" width="1024" height="1024">
+          <h1>ToDo</h1>
+        </div>
+        <p class="lead" data-i18n="lead"></p>
+        <div class="actions">
+          <a class="btn btn-primary" data-download="source"
+             href="https://github.com/adm1nsys/ToDo/archive/refs/heads/main.zip">
+            <span data-i18n="download"></span>
+          </a>
+          <a class="btn" href="#build" data-i18n="buildBtn"></a>
+          <a class="btn btn-ghost" href="https://github.com/adm1nsys/ToDo" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <p class="meta" data-i18n="meta"></p>
+      </header>
+
+      <figure class="card shot"><img src="https://raw.githubusercontent.com/adm1nsys/ToDo/main/dem.png" data-i18n-alt="shotAlt" width="1728" height="1117"></figure>
+
+      <div class="folds">
+        <details class="card fold" open>
+          <summary><span data-i18n="whatTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="whatBody"></div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="notifyTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="notifyBody"></div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="reqTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body">
+            <div class="table-wrap">
+              <table>
+                <tbody>
+                  <tr><td>iOS / iPadOS</td><td data-i18n="req14"></td></tr>
+                  <tr><td>macOS (Designed for iPad)</td><td data-i18n="reqMac"></td></tr>
+                  <tr><td>visionOS (Designed for iPad)</td><td data-i18n="reqVision"></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p data-i18n="reqNote"></p>
+          </div>
+        </details>
+
+        <details class="card fold" id="build">
+          <summary><span data-i18n="buildTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="buildBody"></div>
+        </details>
+
+        <details class="card fold">
+          <summary><span data-i18n="codeTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-i18n-html="codeBody"></div>
+        </details>
+
+        <details class="card fold" id="versions" open>
+          <summary><span data-i18n="versionsTitle"></span><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="fold-body" data-releases></div>
+        </details>
+      </div>
+    </main>
+
+    <script>
+      const REPO = 'https://github.com/adm1nsys/ToDo';
+      const file = (path, label = path.split('/').pop()) => `<a href="${REPO}/blob/main/${path}" target="_blank" rel="noopener"><code>${label}</code></a>`;
+      window.PROJECT = {
+        repo: 'adm1nsys/ToDo',
+        license: 'GPL-3.0',
+        langs: ['de', 'en'],
+        fallback: [{ label: 'ToDo (main, zip)', url: `${REPO}/archive/refs/heads/main.zip` }],
+        i18n: {
+          de: {
+            lead: 'Eine kleine Aufgaben-App für iPhone und iPad, geschrieben in SwiftUI. Aufgaben mit Beschreibung und Frist, Erinnerungen vor der Frist und eine Begrüßung mit deinem Namen — je nach Tageszeit.',
+            download: 'Code herunterladen',
+            buildBtn: 'Selbst bauen',
+            meta: 'Swift · SwiftUI · iOS 14+ · GPL-3.0',
+            shotAlt: 'ToDo: Aufgabenliste, Aufgabeneditor, Einstellungen und eine Testbenachrichtigung',
+            whatTitle: 'Was es kann',
+            whatBody: `<ul><li><strong>Aufgaben</strong> mit Titel, optionaler Beschreibung und optionaler Frist.</li><li><strong>Sinnvolle Reihenfolge:</strong> offene Aufgaben zuerst, überfällige ganz oben, dann nach Frist. Jede Aufgabe zeigt die verbleibende Zeit („2 days“, „1h 20m“) oder wie lange sie überfällig ist.</li><li><strong>Begrüßung</strong> nach Tageszeit („Good Morning“, „Good Evening“ …) mit deinem Namen, den die App beim ersten Start abfragt.</li><li><strong>Animierter Startbildschirm</strong>, Layout für iPhone und iPad, helles und dunkles Design.</li><li>Aufgaben und Einstellungen bleiben auf dem Gerät (<code>UserDefaults</code>) — nichts wird verschickt.</li></ul>`,
+            notifyTitle: 'Benachrichtigungen',
+            notifyBody: `<p>Zur Frist kommt eine Benachrichtigung. Mit dem Schalter <strong>Reminder</strong> in den Einstellungen kommen zusätzlich Erinnerungen einen Tag, eine Stunde und eine Minute vorher. Erledigte oder gelöschte Aufgaben nehmen ihre Benachrichtigungen mit.</p><p>Die Taste <strong>Test Notification</strong> fragt nach der Erlaubnis und schickt nach zehn Sekunden eine Testnachricht — so sieht man sofort, ob alles funktioniert. Der Code dafür steckt in ${file('ToDo/Models/NotificationService.swift')}.</p>`,
+            reqTitle: 'Voraussetzungen',
+            req14: '14 oder neuer',
+            reqMac: 'Mac mit Apple Silicon',
+            reqVision: '1 oder neuer',
+            reqNote: 'Gebaut mit Xcode 15.2. Getestet auf einem echten iPhone SE (1. Generation, iOS 15.7.8) und im Simulator auf dem iPhone 15 Pro (iOS 17.2).',
+            buildTitle: 'Selbst bauen',
+            buildBody: `<p>Einen App-Store-Build gibt es nicht. So läuft die App auf dem eigenen Gerät:</p><ol><li><code>ToDo.xcodeproj</code> in Xcode öffnen.</li><li>Unter <em>Signing &amp; Capabilities</em> das eigene Team wählen — eine kostenlose Apple-ID reicht.</li><li>iPhone oder Simulator wählen und auf <strong>Run</strong> drücken (⌘R).</li></ol>`,
+            codeTitle: 'Aufbau des Codes',
+            codeBody: `<ul><li>${file('ToDo/ToDoApp.swift')}, ${file('ToDo/ContentView.swift')} — Einstieg, Aufgabenliste, Speichern und Sortieren.</li><li>${file('ToDo/LoadScreenView.swift')} — der animierte Startbildschirm.</li><li>${file('ToDo/Models/TaskListView.swift')} — die Liste und die Zeit bis zur Frist.</li><li>${file('ToDo/Models/TaskEditorView.swift')} — Aufgaben anlegen und bearbeiten.</li><li>${file('ToDo/Models/NotificationService.swift')} — Benachrichtigungen und Erinnerungen.</li><li>${file('ToDo/Models/SettingsView.swift')}, ${file('ToDo/Models/SetUpView.swift')} — Einstellungen und die Namensabfrage beim ersten Start.</li><li>${file('ToDo/Models/Hello.swift')} — die Begrüßung nach Tageszeit.</li></ul>`,
+            versionsTitle: 'Versionen',
+            title: 'ToDo — adm1nsys'
+          },
+          en: {
+            lead: 'A small to-do app for iPhone and iPad, written in SwiftUI. Tasks with a description and a deadline, reminders before the deadline and a greeting with your name — depending on the time of day.',
+            download: 'Download the code',
+            buildBtn: 'Build it yourself',
+            meta: 'Swift · SwiftUI · iOS 14+ · GPL-3.0',
+            shotAlt: 'ToDo: task list, task editor, settings and a test notification',
+            whatTitle: 'What it does',
+            whatBody: `<ul><li><strong>Tasks</strong> with a title, an optional description and an optional deadline.</li><li><strong>Sensible order:</strong> open tasks first, overdue ones on top, then by deadline. Each task shows the time left (“2 days”, “1h 20m”) or how long it is overdue.</li><li><strong>Greeting</strong> by time of day (“Good Morning”, “Good Evening” …) with your name, which the app asks for on first launch.</li><li><strong>Animated launch screen</strong>, layout for iPhone and iPad, light and dark mode.</li><li>Tasks and settings stay on the device (<code>UserDefaults</code>) — nothing is sent anywhere.</li></ul>`,
+            notifyTitle: 'Notifications',
+            notifyBody: `<p>A notification arrives at the deadline. With the <strong>Reminder</strong> switch in Settings you also get reminders one day, one hour and one minute before. Completed or deleted tasks take their notifications with them.</p><p>The <strong>Test Notification</strong> button asks for permission and sends a test message after ten seconds, so you can see right away that everything works. The code lives in ${file('ToDo/Models/NotificationService.swift')}.</p>`,
+            reqTitle: 'Requirements',
+            req14: '14 or later',
+            reqMac: 'Mac with Apple silicon',
+            reqVision: '1 or later',
+            reqNote: 'Built with Xcode 15.2. Tested on a real iPhone SE (1st generation, iOS 15.7.8) and in the iPhone 15 Pro simulator (iOS 17.2).',
+            buildTitle: 'Build it yourself',
+            buildBody: `<p>There is no App Store build. To run the app on your own device:</p><ol><li>Open <code>ToDo.xcodeproj</code> in Xcode.</li><li>Under <em>Signing &amp; Capabilities</em> choose your own team — a free Apple ID is enough.</li><li>Pick your iPhone or a simulator and press <strong>Run</strong> (⌘R).</li></ol>`,
+            codeTitle: 'How the code is laid out',
+            codeBody: `<ul><li>${file('ToDo/ToDoApp.swift')}, ${file('ToDo/ContentView.swift')} — entry point, task list, saving and sorting.</li><li>${file('ToDo/LoadScreenView.swift')} — the animated launch screen.</li><li>${file('ToDo/Models/TaskListView.swift')} — the list and the time left until each deadline.</li><li>${file('ToDo/Models/TaskEditorView.swift')} — adding and editing tasks.</li><li>${file('ToDo/Models/NotificationService.swift')} — notifications and reminders.</li><li>${file('ToDo/Models/SettingsView.swift')}, ${file('ToDo/Models/SetUpView.swift')} — settings and the name prompt on first launch.</li><li>${file('ToDo/Models/Hello.swift')} — the greeting by time of day.</li></ul>`,
+            versionsTitle: 'Versions',
+            title: 'ToDo — adm1nsys'
+          }
+        }
+      };
+    </script>
+    <script src="/adm1nsys/kit/project.js"></script>
+  </body>
+</html>
