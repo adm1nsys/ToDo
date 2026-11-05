@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.github/workflows/pages.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # An iOS app can't be shipped as a file outside the App Store, so CI only checks that it builds
+      - name: Build for the iOS Simulator
+        run: |
+          xcodebuild \
+            -project ToDo.xcodeproj \
+            -scheme ToDo \
+            -configuration Debug \
+            -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath "$RUNNER_TEMP/Derived" \
+            CODE_SIGNING_ALLOWED=NO \
+            build

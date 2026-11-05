@@ -6,7 +6,7 @@
 <p>
   <a href="https://adm1nsys.github.io/ToDo/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
   <a href="https://github.com/adm1nsys/ToDo/archive/refs/heads/main.zip"><img alt="Download source" src="https://img.shields.io/badge/Download-source-070707?style=for-the-badge&logo=github&logoColor=white"></a>
-  <img alt="iOS 14+" src="https://img.shields.io/badge/iOS-14%2B-070707?style=for-the-badge&logo=apple&logoColor=white">
+  <img alt="iOS 15+" src="https://img.shields.io/badge/iOS-15%2B-070707?style=for-the-badge&logo=apple&logoColor=white">
   <img alt="SwiftUI" src="https://img.shields.io/badge/SwiftUI-070707?style=for-the-badge&logo=swift&logoColor=white">
   <a href="LICENSE"><img alt="License GPL-3.0" src="https://img.shields.io/badge/License-GPL--3.0-070707?style=for-the-badge"></a>
 </p>
