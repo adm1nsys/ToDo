@@ -28,7 +28,7 @@ A small to-do app for iPhone and iPad, written in SwiftUI. Tasks get a title, an
 
 | Platform | Version |
 | --- | --- |
-| iOS / iPadOS | 14 or later |
+| iOS / iPadOS | 15 or later |
 | macOS (Designed for iPad) | Apple silicon Mac |
 | visionOS (Designed for iPad) | 1 or later |
 
