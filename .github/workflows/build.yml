@@ -21,7 +21,8 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      # An iOS app can't be shipped as a file outside the App Store, so CI only checks that it builds
+      # An iOS app can't be shipped as a file outside the App Store, so CI only checks that it builds.
+      # The project targets iOS 14; current Xcode can't build below iOS 15, so CI raises it for this build only.
       - name: Build for the iOS Simulator
         run: |
           xcodebuild \
@@ -31,4 +32,5 @@ jobs:
             -destination "generic/platform=iOS Simulator" \
             -derivedDataPath "$RUNNER_TEMP/Derived" \
             CODE_SIGNING_ALLOWED=NO \
+            IPHONEOS_DEPLOYMENT_TARGET=15.0 \
             build
